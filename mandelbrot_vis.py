@@ -22,9 +22,9 @@ while True:
 
 # frame and basic conceptual limits
 width = def_width
-x = -0.65 # x-offset
+x = -0.66 # x-offset
 y = 0
-x_range = 3.4
+x_range = 3.3
 frame_ratio = 4/3 
 
 # iterations to test before concluding bound or unbound
@@ -45,7 +45,7 @@ pixels = img.load()
 
 def powerColor(dist, exp, const, scale):
     color = dist**exp
-    rgb = colorsys.hsv_to_rgb(const + scale * color,1 - 0.6 * color,0.9)
+    rgb = colorsys.hsv_to_rgb(const + scale * color, 1 - 0.6 * color, 0.9)
     return tuple(round(i * 255) for i in rgb)
 
 for row in range(height):
